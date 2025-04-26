@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock-Paper-Scissors GAME</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav></nav>
+		</header>
+
+		<main>
+			<section class="header">
+				<h1>ROCK-PAPER-SCISSORS</h1>
+			</section>
+
+			<section class="display">
+				<div class="player">
+					<img src="image/rock.png" alt="Player Hand" />
+					<h2>Player</h2>
+					<div class="hearts" id="player-hearts">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 -1 10 10"
+							width="120"
+							height="120"
+							shape-rendering="crispEdges"
+							id="heart"
+						>
+							<g fill="#000000" stroke="none">
+								<rect x="1" y="0" width="3" height="1" />
+								<rect x="6" y="0" width="3" height="1" />
+								<rect x="0" y="1" width="10" height="3" />
+								<rect x="1" y="4" width="8" height="1" />
+								<rect x="2" y="5" width="6" height="1" />
+								<rect x="3" y="6" width="4" height="1" />
+								<rect x="4" y="7" width="2" height="1" />
+							</g>
+							<g fill="#ff0000" stroke="none">
+								<rect x="2" y="1" width="2" height="1" />
+								<rect x="2" y="2" width="6" height="2" />
+								<rect x="3" y="4" width="5" height="1" />
+								<rect x="4" y="5" width="3" height="1" />
+								<rect x="5" y="6" width="1" height="1" />
+							</g>
+							<g fill="#ff5757" stroke="none">
+								<rect x="6" y="1" width="3" height="1" />
+								<rect x="8" y="2" width="1" height="1" />
+								<rect x="8" y="3" width="1" height="1" />
+							</g>
+							<g fill="#9d0000" stroke="none">
+								<rect x="1" y="1" width="1" height="3" />
+								<rect x="2" y="4" width="1" height="1" />
+								<rect x="3" y="5" width="1" height="1" />
+								<rect x="4" y="6" width="1" height="1" />
+							</g>
+						</svg>
+
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 -1 10 10"
+							width="120"
+							height="120"
+							shape-rendering="crispEdges"
+							id="heart"
+						>
+							<g fill="#000000" stroke="none">
+								<rect x="1" y="0" width="3" height="1" />
+								<rect x="6" y="0" width="3" height="1" />
+								<rect x="0" y="1" width="10" height="3" />
+								<rect x="1" y="4" width="8" height="1" />
+								<rect x="2" y="5" width="6" height="1" />
+								<rect x="3" y="6" width="4" height="1" />
+								<rect x="4" y="7" width="2" height="1" />
+							</g>
+							<g fill="#ff0000" stroke="none">
+								<rect x="2" y="1" width="2" height="1" />
+								<rect x="2" y="2" width="6" height="2" />
+								<rect x="3" y="4" width="5" height="1" />
+								<rect x="4" y="5" width="3" height="1" />
+								<rect x="5" y="6" width="1" height="1" />
+							</g>
+							<g fill="#ff5757" stroke="none">
+								<rect x="6" y="1" width="3" height="1" />
+								<rect x="8" y="2" width="1" height="1" />
+								<rect x="8" y="3" width="1" height="1" />
+							</g>
+							<g fill="#9d0000" stroke="none">
+								<rect x="1" y="1" width="1" height="3" />
+								<rect x="2" y="4" width="1" height="1" />
+								<rect x="3" y="5" width="1" height="1" />
+								<rect x="4" y="6" width="1" height="1" />
+							</g>
+						</svg>
+
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 -1 10 10"
+							width="120"
+							height="120"
+							shape-rendering="crispEdges"
+							id="heart"
+						>
+							<g fill="#000000" stroke="none">
+								<rect x="1" y="0" width="3" height="1" />
+								<rect x="6" y="0" width="3" height="1" />
+								<rect x="0" y="1" width="10" height="3" />
+								<rect x="1" y="4" width="8" height="1" />
+								<rect x="2" y="5" width="6" height="1" />
+								<rect x="3" y="6" width="4" height="1" />
+								<rect x="4" y="7" width="2" height="1" />
+							</g>
+							<g fill="#ff0000" stroke="none">
+								<rect x="2" y="1" width="2" height="1" />
+								<rect x="2" y="2" width="6" height="2" />
+								<rect x="3" y="4" width="5" height="1" />
+								<rect x="4" y="5" width="3" height="1" />
+								<rect x="5" y="6" width="1" height="1" />
+							</g>
+							<g fill="#ff5757" stroke="none">
+								<rect x="6" y="1" width="3" height="1" />
+								<rect x="8" y="2" width="1" height="1" />
+								<rect x="8" y="3" width="1" height="1" />
+							</g>
+							<g fill="#9d0000" stroke="none">
+								<rect x="1" y="1" width="1" height="3" />
+								<rect x="2" y="4" width="1" height="1" />
+								<rect x="3" y="5" width="1" height="1" />
+								<rect x="4" y="6" width="1" height="1" />
+							</g>
+						</svg>
+					</div>
+				</div>
+
+				<div class="computer">
+					<img src="image/rock.png" alt="Computer Hand" />
+					<h2>Computer</h2>
+					<div class="hearts" id="computer-hearts">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 -1 10 10"
+							width="120"
+							height="120"
+							shape-rendering="crispEdges"
+							id="heart"
+						>
+							<g fill="#000000" stroke="none">
+								<rect x="1" y="0" width="3" height="1" />
+								<rect x="6" y="0" width="3" height="1" />
+								<rect x="0" y="1" width="10" height="3" />
+								<rect x="1" y="4" width="8" height="1" />
+								<rect x="2" y="5" width="6" height="1" />
+								<rect x="3" y="6" width="4" height="1" />
+								<rect x="4" y="7" width="2" height="1" />
+							</g>
+							<g fill="#ff0000" stroke="none">
+								<rect x="2" y="1" width="2" height="1" />
+								<rect x="2" y="2" width="6" height="2" />
+								<rect x="3" y="4" width="5" height="1" />
+								<rect x="4" y="5" width="3" height="1" />
+								<rect x="5" y="6" width="1" height="1" />
+							</g>
+							<g fill="#ff5757" stroke="none">
+								<rect x="6" y="1" width="3" height="1" />
+								<rect x="8" y="2" width="1" height="1" />
+								<rect x="8" y="3" width="1" height="1" />
+							</g>
+							<g fill="#9d0000" stroke="none">
+								<rect x="1" y="1" width="1" height="3" />
+								<rect x="2" y="4" width="1" height="1" />
+								<rect x="3" y="5" width="1" height="1" />
+								<rect x="4" y="6" width="1" height="1" />
+							</g>
+						</svg>
+
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 -1 10 10"
+							width="120"
+							height="120"
+							shape-rendering="crispEdges"
+							id="heart"
+						>
+							<g fill="#000000" stroke="none">
+								<rect x="1" y="0" width="3" height="1" />
+								<rect x="6" y="0" width="3" height="1" />
+								<rect x="0" y="1" width="10" height="3" />
+								<rect x="1" y="4" width="8" height="1" />
+								<rect x="2" y="5" width="6" height="1" />
+								<rect x="3" y="6" width="4" height="1" />
+								<rect x="4" y="7" width="2" height="1" />
+							</g>
+							<g fill="#ff0000" stroke="none">
+								<rect x="2" y="1" width="2" height="1" />
+								<rect x="2" y="2" width="6" height="2" />
+								<rect x="3" y="4" width="5" height="1" />
+								<rect x="4" y="5" width="3" height="1" />
+								<rect x="5" y="6" width="1" height="1" />
+							</g>
+							<g fill="#ff5757" stroke="none">
+								<rect x="6" y="1" width="3" height="1" />
+								<rect x="8" y="2" width="1" height="1" />
+								<rect x="8" y="3" width="1" height="1" />
+							</g>
+							<g fill="#9d0000" stroke="none">
+								<rect x="1" y="1" width="1" height="3" />
+								<rect x="2" y="4" width="1" height="1" />
+								<rect x="3" y="5" width="1" height="1" />
+								<rect x="4" y="6" width="1" height="1" />
+							</g>
+						</svg>
+
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 -1 10 10"
+							width="120"
+							height="120"
+							shape-rendering="crispEdges"
+							id="heart"
+						>
+							<g fill="#000000" stroke="none">
+								<rect x="1" y="0" width="3" height="1" />
+								<rect x="6" y="0" width="3" height="1" />
+								<rect x="0" y="1" width="10" height="3" />
+								<rect x="1" y="4" width="8" height="1" />
+								<rect x="2" y="5" width="6" height="1" />
+								<rect x="3" y="6" width="4" height="1" />
+								<rect x="4" y="7" width="2" height="1" />
+							</g>
+							<g fill="#ff0000" stroke="none">
+								<rect x="2" y="1" width="2" height="1" />
+								<rect x="2" y="2" width="6" height="2" />
+								<rect x="3" y="4" width="5" height="1" />
+								<rect x="4" y="5" width="3" height="1" />
+								<rect x="5" y="6" width="1" height="1" />
+							</g>
+							<g fill="#ff5757" stroke="none">
+								<rect x="6" y="1" width="3" height="1" />
+								<rect x="8" y="2" width="1" height="1" />
+								<rect x="8" y="3" width="1" height="1" />
+							</g>
+							<g fill="#9d0000" stroke="none">
+								<rect x="1" y="1" width="1" height="3" />
+								<rect x="2" y="4" width="1" height="1" />
+								<rect x="3" y="5" width="1" height="1" />
+								<rect x="4" y="6" width="1" height="1" />
+							</g>
+						</svg>
+					</div>
+				</div>
+			</section>
+
+			<section class="btn">
+				<button>
+					<h2>ROCK</h2>
+					<img src="image/rock.png" alt="rock" />
+				</button>
+				<button>
+					<h2>PAPER</h2>
+					<img src="image/paper.png" alt="paper" />
+				</button>
+				<button>
+					<h2>SCISSORS</h2>
+					<img src="image/scissors.png" alt="scissor" />
+				</button>
+			</section>
+
+			<section class="result">
+				<h2><span id="game-result">Waiting for your move...</span></h2>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
