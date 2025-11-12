@@ -263,11 +263,23 @@ main img {
 	}
 	
 	.heart {
-		width: 2.5rem; /* 50px */
-		height: 2.5rem; /* 50px */
+		width: 2rem; /* 50px */
+		height: 2rem; /* 50px */
+	}
+
+	.player h2, .computer h2 {
+		font-size: 1.25rem;
 	}
 
 	.header h1 {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
+	}
+
+	.result {
+		max-width: 20rem;
+	}
+
+	.result h2 {
+		font-size: 1rem;
 	}
 }
