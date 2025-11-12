@@ -9,15 +9,19 @@
 	box-sizing: border-box;
 }
 
+:root {
+	font-size: 16px; /* Base font size for rem calculations */
+}
+
 body {
-	max-width: 900px;
-	max-height: 100svh;
-	margin: 25px auto;
+	width: 100%;
+	height: 100dvh;
 	background-color: #ffe3d4;
 	font-family: pixel, sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 1rem;
 }
 
 main {
@@ -26,17 +30,19 @@ main {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
-	border-radius: 20px;
-	padding: 30px;
+	box-shadow: 0 0.3125rem 0.9375rem 0.3125rem rgba(0, 0, 0, 0.2);
+	border-radius: 1.25rem;
+	padding: 1rem;
+	width: 100%; 
+	margin: 10rem;
 }
 
 section {
-	margin: 20px 0;
+	margin: 1.25rem 0;
 }
 
 .header {
-	font-size: 36px;
+	font-size: clamp(1.5rem, 4vw, 2.25rem);
 	margin-bottom: 0;
 }
 
@@ -46,22 +52,26 @@ section {
 	justify-content: space-around;
 	flex-direction: row;
 	margin: 0;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 main img {
-	width: 150px;
+	width: 6rem; 
 }
 
-#heart {
-	width: 70px;
-	height: 70px;
+.heart {
+	width: 3rem; 
+	height: 3rem;
 }
 
 .player,
 .computer {
 	text-align: center;
-	margin: 0 20px;
-	font-size: 24px;
+	margin: 0 1.25rem;
+	font-size: clamp(1rem, 3vw, 1.5rem);
+	flex: 1;
+	min-width: 10rem;
 }
 
 .player h2, .computer h2 {
@@ -89,7 +99,7 @@ main img {
 		transform: translateY(0) scaleX(-1) rotate(-23deg);
 	}
 	50% {
-		transform: translateY(-15px) scaleX(-1) rotate(-23deg);
+		transform: translateY(-0.9375rem) scaleX(-1) rotate(-23deg);
 	}
 }
 
@@ -103,36 +113,38 @@ main img {
 		transform: translateY(0) rotate(-23deg);
 	}
 	50% {
-		transform: translateY(-15px) rotate(-23deg);
+		transform: translateY(-0.9375rem) rotate(-23deg);
 	}
 }
 
 .btn {
 	display: flex;
 	justify-content: center;
-	gap: 10px;
+	gap: 0.625rem;
+	flex-wrap: wrap;
 }
 
 .btn button {
-	height: 150px;
-	width: 150px;
+	height: 9.375rem; /* 150px */
+	width: 9.375rem; /* 150px */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column-reverse;
 	background-color: #4a6b75;
-	border-radius: 15px;
-	border: 2px solid black;
+	border-radius: 0.9375rem;
+	border: 0.125rem solid black;
+	flex: 0 1 auto;
 }
 
 .btn button h2 {
 	font-family: pixel, sans-serif;
-	font-size: 1.5em;
+	font-size: clamp(1rem, 2vw, 1.5rem);
 	color: #F4EBD0;
 }
 
 .btn button img {
-	width: 100px;
+	width: 5rem; 
 	transform: rotate(10deg);
 	fill: red;
 }
@@ -144,17 +156,18 @@ main img {
 }
 
 .result {
-    margin: 15px auto 5px;
-    padding: 10px;
-	width: 500px;
-    background-color: #f4b896;
-    border: 2px solid black;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: #2f1e1e;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	margin: 0.9375rem auto 0.3125rem;
+	padding: 0.625rem;
+	width: 100%;
+	max-width: 30rem; /* 500px */
+	background-color: #f4b896;
+	border: 0.125rem solid black;
+	border-radius: 0.3125rem;
+	text-align: center;
+	font-size: clamp(0.875rem, 2vw, 1rem);
+	font-weight: bold;
+	color: #2f1e1e;
+	text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fadeAndColor {
@@ -169,7 +182,8 @@ main img {
 	50% {
 		opacity: 1;
 		color: #1c0d0d;
-	}75% {
+	}
+	75% {
 		opacity: 0.5;
 		color: #2f1e1e;
 	}
@@ -186,4 +200,70 @@ main img {
 #game-result.static {
 	animation: none;
 	color: inherit;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 48rem) { /* 768px */
+	main {
+		padding: 1.25rem;
+		margin: 1rem;
+	}
+	
+	.display {
+		gap: 1.5rem;
+	}
+	
+	.player, .computer {
+		margin: 0;
+	}
+	
+	.btn button {
+		height: 7.5rem; /* 120px */
+		width: 7.5rem; /* 120px */
+	}
+	
+	.btn button img {
+		width: 5rem; /* 80px */
+	}
+}
+
+@media (max-width: 30rem) { /* 480px */
+	main {
+		padding: 1rem;
+		border-radius: 0.9375rem;
+	}
+	
+	.header {
+		font-size: 1.25rem;
+	}
+
+	.display {
+		flex-wrap: nowrap;
+	}
+
+	.player, .computer {
+		width: 50%;
+	}
+	
+	.btn {
+		gap: 0.5rem;
+	}
+	
+	.btn button {
+		height: 6.25rem; /* 100px */
+		width: 6.25rem; /* 100px */
+	}
+	
+	.btn button img {
+		width: 3.75rem; /* 60px */
+	}
+	
+	.heart {
+		width: 2.5rem; /* 50px */
+		height: 2.5rem; /* 50px */
+	}
+
+	.header h1 {
+		font-size: 1.5rem;
+	}
 }

@@ -4,8 +4,8 @@ const buttons = document.querySelectorAll(".btn button");
 const playerImg = document.querySelector(".player img");
 const computerImg = document.querySelector(".computer img");
 const resultDisplay = document.getElementById("game-result");
-const playerHearts = document.querySelectorAll("#player-hearts svg");
-const computerHearts = document.querySelectorAll("#computer-hearts svg");
+const playerHearts = document.querySelectorAll("#player-hearts .heart");
+const computerHearts = document.querySelectorAll("#computer-hearts .heart");
 
 let playerLives = 3;
 let computerLives = 3;
